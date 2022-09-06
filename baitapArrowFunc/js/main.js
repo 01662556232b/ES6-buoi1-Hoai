@@ -10,16 +10,16 @@ const ListColor =
     "fuschia",
     "cinnabar"
 ];
-let showbutton = () => {
+let rendercolor = () => {
    let content = "";
    ListColor.map((color,index) => {
     if(index == 0){
         content += `
-            <button class="color-button ${color} active" onclick="chancolor('${color}')" ></button>
+            <button class="color-button ${color} active" onclick="chanhouse('${color}')" ></button>
         `;
     }else{
         content += `
-            <button class="color-button ${color}" onclick="chancolor('${color}')" ></button>
+            <button class="color-button ${color}" onclick="chanhouse('${color}')" ></button>
         `;
     }
         
@@ -28,9 +28,9 @@ let showbutton = () => {
     })
     document.querySelector("#colorContainer").innerHTML = content;
 }
-showbutton();
+rendercolor();
 
-let chancolor = (color) => {
+let chanhouse = (color) => {
 
     let btn = document.querySelectorAll(".color-button");
     for (let i = 0; i < btn.length; i++) {

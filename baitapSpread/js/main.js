@@ -1,13 +1,14 @@
-let jump = () => {
-    let str = "Hover Me!"
+
+let hoverspread = () => {
+    let aterzoon = "Hover Me!"
     let content = "";
-    let str2 = [...str];
-    str2.map((hover) => { 
+    let befonezoon = [...aterzoon];
+    befonezoon.map((zoomplue) => { 
         content +=`
-            <span>${hover}</span>
+            <span>${zoomplue}</span>
         `
     });
    document.querySelector(".heading").innerHTML = content;
 
 }
-jump()
+hoverspread()
